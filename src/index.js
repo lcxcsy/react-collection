@@ -1,16 +1,9 @@
-/*
- * @Author: your name
- * @Date: 2021-08-26 16:19:51
- * @LastEditTime: 2021-08-26 18:40:15
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: \react\react-demo\src\index.js
- */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/index.css'
 import Home from '../src/pages/home'
 import reportWebVitals from './reportWebVitals'
+import 'antd/dist/antd.css'
+import './styles/index.css'
 
 ReactDOM.render(
   <React.StrictMode>
