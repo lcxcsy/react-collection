@@ -1,7 +1,7 @@
 /*
  * @Author: 刘晨曦
  * @Date: 2021-08-27 14:30:11
- * @LastEditTime: 2021-08-30 15:14:14
+ * @LastEditTime: 2021-08-30 15:36:54
  * @LastEditors: Please set LastEditors
  * @Description: 通用方法的封装
  * @FilePath: \quick-react\src\utils\common.js
@@ -15,6 +15,11 @@ function _typeOf (data) {
   return Object.prototype.toString.call(data)
 }
 
+function _trim (str) {
+  return str.replace(/(^\s*)|(\s*$)/g, '')
+}
+
 export {
-  _typeOf
+  _typeOf,
+  _trim
 }
