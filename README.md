@@ -7,7 +7,7 @@
  * @FilePath: \react\react-demo\README.md
 -->
 
-## React-Demo
+## Quick-React
 
 ### 基本指令
 
