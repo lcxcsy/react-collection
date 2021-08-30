@@ -1,9 +1,16 @@
+/*
+ * @Author: 刘晨曦
+ * @Date: 2021-08-28 10:09:24
+ * @LastEditTime: 2021-08-30 14:04:04
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \quick-react\src\index.js
+ */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Home from '../src/pages/home'
+import Home from './pages/Home'
 import reportWebVitals from './reportWebVitals'
-import 'antd/dist/antd.css'
-import './styles/index.css'
+import '@/styles/index.css'
 
 ReactDOM.render(
   <React.StrictMode>
