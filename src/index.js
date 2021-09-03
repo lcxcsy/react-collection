@@ -1,21 +1,19 @@
 /*
  * @Author: 刘晨曦
  * @Date: 2021-08-28 10:09:24
- * @LastEditTime: 2021-08-30 14:04:04
+ * @LastEditTime: 2021-09-03 16:37:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \quick-react\src\index.js
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Home from './pages/Home'
 import reportWebVitals from './reportWebVitals'
-import '@/styles/index.css'
+import Routes from '@/core/router'
+import '@/styles/index.scss'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
+  <Routes />,
   document.getElementById('root')
 )
 

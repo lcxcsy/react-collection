@@ -1,13 +1,12 @@
 /*
  * @Author: 刘晨曦
  * @Date: 2021-08-27 14:28:42
- * @LastEditTime: 2021-08-30 15:38:53
+ * @LastEditTime: 2021-09-02 16:15:26
  * @LastEditors: Please set LastEditors
  * @Description: Axios封装
  * @FilePath: \quick-react\src\core\httpInstance.js
  */
 import axios from 'axios'
-import { _typeOf, _trim } from '@/utils'
 import { message as Message } from 'antd'
 
 const REQUEST_SUCCESS = '0'
@@ -56,7 +55,7 @@ http.interceptors.response.use(function (response) {
       Message.error('服务器内部错误!')
       break
     default:
-      if (_typeOf(error.response.data) === '[object Object]') {
+      if (Object.prototype.toString.call(error.response.data) === '[object Object]') {
         Message.error(error.response.data)
       }
   }
@@ -66,7 +65,7 @@ http.interceptors.response.use(function (response) {
 // 请求拦截器
 http.interceptors.request.use(function (config) {
   // 所有搜索框可输入元素，都不需要去掉前后空格，只有仅输入空格时，此字段搜索无效
-  return _trim(config)
+  return config.replace(/(^\s*)|(\s*$)/g, '')
 }, function (error) {
   // 对请求错误做些什么
   return Promise.reject(error)
