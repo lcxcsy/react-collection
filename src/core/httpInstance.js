@@ -1,7 +1,7 @@
 /*
  * @Author: 刘晨曦
  * @Date: 2021-08-27 14:28:42
- * @LastEditTime: 2021-09-02 16:15:26
+ * @LastEditTime: 2021-09-04 11:47:30
  * @LastEditors: Please set LastEditors
  * @Description: Axios封装
  * @FilePath: \quick-react\src\core\httpInstance.js
@@ -9,7 +9,7 @@
 import axios from 'axios'
 import { message as Message } from 'antd'
 
-const REQUEST_SUCCESS = '0'
+const REQUEST_SUCCESS = 0
 
 const http = axios.create({
   timeout: 20000,
@@ -31,9 +31,13 @@ http.interceptors.response.use(function (response) {
       Message.error(response.data.msg)
     }
     return Promise.reject(response)
-  } else if (response.data.code === REQUEST_SUCCESS && response.config.successNotify && response.config.successMsg) {
+  } else if (
+    response.data.code === REQUEST_SUCCESS &&
+    response.config.successNotify &&
+    response.config.successMsg
+  ) {
     // 弹出成功提示
-    Message.success(response.data.successMsg)
+    Message.success(response.config.successMsg)
   }
   return Promise.resolve({
     code: response.data.code,
@@ -63,9 +67,11 @@ http.interceptors.response.use(function (response) {
 })
 
 // 请求拦截器
-http.interceptors.request.use(function (config) {
-  // 所有搜索框可输入元素，都不需要去掉前后空格，只有仅输入空格时，此字段搜索无效
-  return config.replace(/(^\s*)|(\s*$)/g, '')
+http.interceptors.request.use((config) => {
+  if (config.method === 'get') {
+    config.params = { ...config.params, _t: Date.now() }
+  }
+  return config
 }, function (error) {
   // 对请求错误做些什么
   return Promise.reject(error)

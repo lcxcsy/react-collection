@@ -1,7 +1,7 @@
 /*
  * @Author: 刘晨曦
  * @Date: 2021-08-30 16:10:30
- * @LastEditTime: 2021-09-03 17:35:59
+ * @LastEditTime: 2021-09-04 11:32:26
  * @LastEditors: Please set LastEditors
  * @Description: React-router的一些配置
  * @FilePath: \quick-react\src\core\router.config.js
@@ -11,25 +11,25 @@ import routers from '@/router.config'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect
+  Route
+  // Redirect
 } from 'react-router-dom'
 
-function RedirectWithStatus ({ from, to, status }) {
-  return (
-    <Route
-      render={({ staticContext }) => {
-        // there is no `staticContext` on the client, so
-        // we need to guard against that here
-        if (staticContext) {
-          console.log(staticContext)
-          staticContext.status = status
-        }
-        return <Redirect from={from} to={to} />
-      }}
-    />
-  )
-}
+// function RedirectWithStatus ({ from, to, status }) {
+//   return (
+//     <Route
+//       render={({ staticContext }) => {
+//         // there is no `staticContext` on the client, so
+//         // we need to guard against that here
+//         if (staticContext) {
+//           console.log(staticContext)
+//           staticContext.status = status
+//         }
+//         return <Redirect from={from} to={to} />
+//       }}
+//     />
+//   )
+// }
 
 const RouteConfig = () => {
   return (

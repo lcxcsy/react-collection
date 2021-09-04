@@ -1,7 +1,7 @@
 <!--
  * @Author: 刘晨曦
  * @Date: 2021-08-26 16:19:51
- * @LastEditTime: 2021-08-30 20:11:07
+ * @LastEditTime: 2021-09-04 11:50:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \react\react-demo\README.md
@@ -20,6 +20,17 @@ create-react-app <name>
 // 运行应用
 yarn start
 ```
+
+### 提交规范
+
+update：更新某功能
+feat：新功能
+fix：修补 bug
+docs：文档
+style：样式变动
+refactor：重构代码
+test：增加测试
+chore：构建过程或辅助工具的变动
 
 ### 构建日志
 

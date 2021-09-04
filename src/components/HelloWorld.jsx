@@ -1,7 +1,12 @@
 import logo from '@/assets/svg/logo.svg'
 import React, { Component } from 'react'
+import { getUserInfo } from '@/api/index'
 
 class HelloWorld extends Component {
+  async componentDidMount () {
+    const { code, data } = await getUserInfo()
+    console.log(code, data)
+  }
   render () {
     return (
       <div className='hello'>
