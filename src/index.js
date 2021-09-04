@@ -9,7 +9,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
-import Routes from '@/core/router'
+import Routes from '@/core/routerDom'
 import '@/styles/index.scss'
 
 ReactDOM.render(

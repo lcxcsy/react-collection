@@ -31,7 +31,7 @@ import {
 //   )
 // }
 
-const RouteConfig = () => {
+const Routes = () => {
   return (
     <Router>
       <Switch>
@@ -57,4 +57,4 @@ const RouteConfig = () => {
   )
 }
 
-export default RouteConfig
+export default Routes

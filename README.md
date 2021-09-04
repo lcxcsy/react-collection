@@ -11,13 +11,20 @@
 
 > React 项目库，封装一些核心的代码，用于快速构建 React 项目。
 
+本项目基于[create-react-app](https://github.com/facebook/create-react-app)构建，主分支 master 作为项目模板，封装了一些常用的代码库，例如：Axios、React-Router、Ant-Design 等。
+
+其他分支后续用于 React 项目的开发。
+
 ### 基本指令
 
 ```js
 // 新建应用
-create-react-app <name>
+git clone git@github.com:Chenxi-Lau/quick-react.git
 
-// 运行应用
+// 安装依赖
+yarn add
+
+// 运行项目
 yarn start
 ```
 
@@ -37,6 +44,10 @@ yarn start
 - [x] 修改目录结构 (2021.08.26)
 - [x] 新增 [Ant Design](https://ant.design/docs/react/introduce-cn) (2021.08.27)
   - [x] [按需加载](https://zhuanlan.zhihu.com/p/163135023)
-- [x] 使用[antd-dayjs-webpack-plugin](https://github.com/ant-design/antd-dayjs-webpack-plugin) (2021.08.30)
+  - [x] 优化打包[antd-dayjs-webpack-plugin](https://github.com/ant-design/antd-dayjs-webpack-plugin) (2021.08.30)
 - [x] 新增 [axios](https://github.com/axios/axios)，封装请求拦截器和响应拦截器 (2021.08.30)
 - [x] 新增 [react-router-dom](https://www.npmjs.com/package/react-router-dom) (2021.08.30)
+
+### 参考文档
+
+1. [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)

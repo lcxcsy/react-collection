@@ -6,13 +6,13 @@
  * @Description: In User Settings Edit
  * @FilePath: \quick-react\src\router.config.js
  */
-import Home from '@/pages/Home'
+import Hello from '@/pages/Hello'
 import Error from '@/pages/Error'
 
 const routers = [
   {
     path: '/', /** 默认页面 */
-    component: Home,
+    component: Hello,
     exact: true /** 是否为严格模式 */
   },
   {
@@ -21,9 +21,9 @@ const routers = [
     component: Error
   },
   {
-    path: '/home',
+    path: '/hello',
     exact: true,
-    component: Home,
+    component: Hello,
     routes: [] /** 嵌套的子路由 */
   }
 ]

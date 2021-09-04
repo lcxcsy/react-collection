@@ -2,6 +2,7 @@ import logo from '@/assets/svg/logo.svg'
 import React, { Component } from 'react'
 
 class HelloWorld extends Component {
+  c
   render () {
     return (
       <div className='hello'>
