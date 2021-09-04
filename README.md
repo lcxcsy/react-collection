@@ -7,9 +7,9 @@
  * @FilePath: \react\react-demo\README.md
 -->
 
-## Quick-React
+# React-Collection
 
-> React 项目库，封装一些核心的代码，用于快速构建 React 项目。
+> React 项目库，master 分支封装一些核心的代码，用于快速构建 React 项目。
 
 本项目基于[create-react-app](https://github.com/facebook/create-react-app)构建，主分支 master 作为项目模板，封装了一些常用的代码库，例如：Axios、React-Router、Ant-Design 等。
 
